@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df9eeb8b-90b5-4fc3-aac8-7a7dd2760057" name="Default Changelist" comment="" />
@@ -18,8 +18,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/C#/ClickToMove.cs" />
         <option value="$PROJECT_DIR$/Assets/C#/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/C#/ClickToMove.cs" />
       </list>
     </option>
   </component>
@@ -70,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579902567780</updated>
       <workItem from="1579902571635" duration="1170000" />
+      <workItem from="1579917214315" duration="53000" />
     </task>
     <servers />
   </component>
@@ -83,7 +84,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
