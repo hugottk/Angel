@@ -59,7 +59,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\C#\CameraFollow.cs" />
-     <Compile Include="Assets\C#\ClickToMove.cs" />
+     <Compile Include="Assets\C#\OnTrigger.cs" />
+     <Compile Include="Assets\C#\PlayerController.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Mathieu/Angel/unity/Angel/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

@@ -13,13 +13,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/C#/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/C#/ClickToMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/C#/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/C#/OnTrigger.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/C#/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/C#/ClickToMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/C#/Spells.cs" />
+        <option value="$PROJECT_DIR$/Assets/C#/OnTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/C#/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/C#/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -71,6 +75,8 @@
       <updated>1579902567780</updated>
       <workItem from="1579902571635" duration="1170000" />
       <workItem from="1579917214315" duration="53000" />
+      <workItem from="1579954648915" duration="1565000" />
+      <workItem from="1579958247535" duration="3286000" />
     </task>
     <servers />
   </component>
