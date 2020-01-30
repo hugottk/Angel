@@ -1,10 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraFollow
     - GameSetup
     - IAenemy
     - NetworkController
-    - PlayerMovement
+    - PlayerController
     - QuickStartLobby
     - QuickStartRoom
     PhotonUnityNetworking.dll:
@@ -57,35 +58,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11628}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11670}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 12094}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12510}
     - Class: 114
-      Script: {instanceID: 12284}
+      Script: {instanceID: 12562}
     - Class: 114
-      Script: {instanceID: 12518}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 13020}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 13090}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13130}
+      Script: {instanceID: 13402}
+    - Class: 114
+      Script: {instanceID: 15218}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -111,8 +114,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 4
       Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
     - Class: 23
@@ -127,20 +128,18 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 13330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -604,10 +603,10 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: d102959034af17e3c40c8785d255965b
+      Hash: 8225e8de64420b81fa4bd3154cfb7d57
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerMovement
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -830,8 +829,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 56244a98ab21674942ce135ffb54ea0b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/MultiplayerScene.unity
-  playerPath: C:/Users/hugo2/Desktop/Angel/unity/Angel/Build/Angel.exe
+  playerPath: C:/Users/Mathieu/Angel/unity/Angel/Build/Angel.exe

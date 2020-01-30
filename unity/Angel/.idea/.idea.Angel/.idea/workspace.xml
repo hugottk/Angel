@@ -99,12 +99,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://D:/unityhub/projet/first hack n slash/Assets/scripts/IAenemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/.editorconfig" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Photon/QuickStartRoom.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -118,6 +118,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Photon/GameSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/CameraFollow.cs" />
       </list>
     </option>
   </component>
@@ -128,6 +130,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -177,6 +180,7 @@
       <workItem from="1580400988089" duration="2734000" />
       <workItem from="1580410532412" duration="2451000" />
       <workItem from="1580415766228" duration="3258000" />
+      <workItem from="1580422962168" duration="1500000" />
     </task>
     <servers />
   </component>
