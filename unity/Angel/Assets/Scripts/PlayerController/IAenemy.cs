@@ -12,7 +12,8 @@ public class IAenemy : MonoBehaviour
     public NavMeshAgent agent;
     private Vector3 initpos;
     private PhotonView PV;
-    List<GameObject> playerlist;
+    GameObject[] enemyTarget;
+    private GameObject closest;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class IAenemy : MonoBehaviour
         PV = GetComponent<PhotonView>();
         agent = GetComponent<NavMeshAgent>();
         initpos = transform.position;
-        playerlist = new List<GameObject>();
+        enemyTarget = new GameObject [4];
     }
 
     // Update is called once per frame
@@ -28,36 +29,26 @@ public class IAenemy : MonoBehaviour
     {    
         if (PV.IsMine)
         {
-            foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
-            {
-                if (Vector3.Distance(initpos, player.transform.position) < 10)
-                {
-                    if (!playerlist.Any())
-                    {
-                        playerlist.Append(player);
-                        agent.SetDestination(playerlist[0].transform.position);
-                    }
-                }
-                else
-                {
-                    if (playerlist.Any())
-                    {
-                        playerlist.RemoveAt(0);
-                        onplayerleave(ref playerlist);
-                    }
-                    agent.SetDestination((initpos));
-                }
-            }
+            agent.SetDestination(FindClosestEnemy().transform.position);
         }
     }
-
-    void onplayerleave(ref List<GameObject> list)
+    GameObject FindClosestEnemy()
     {
-        int l = list.Count-1;
-        while (l>0)
+        enemyTarget = GameObject.FindGameObjectsWithTag("Player");
+        float distance = Mathf.Infinity;
+     
+        foreach (GameObject go in enemyTarget) 
         {
-            list[l - 1] = list[l];
-            l--;
+            Vector3 diff = go.transform.position - initpos;
+            float curDistance = diff.sqrMagnitude;
+         
+            if (curDistance < distance) 
+            {
+                closest = go;
+                distance = curDistance;
+                //Debug.Log(closest.name);
+            }
         }
+        return closest;
     }
 }
