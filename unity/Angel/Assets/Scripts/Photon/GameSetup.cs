@@ -13,6 +13,5 @@ public class GameSetup : MonoBehaviour
     {
         Debug.Log("Creating Player");
         PhotonNetwork.Instantiate("Player", spawnPoint.transform.position, Quaternion.identity);
-        PhotonNetwork.Instantiate("enemy", enemyspawnPoint.transform.position, Quaternion.identity);
     }
 }

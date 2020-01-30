@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 public class IAenemy : MonoBehaviour
 {
-    public UnityEngine.AI.NavMeshAgent agent;
+    public NavMeshAgent agent;
     private Vector3 initpos;
     private PhotonView PV;
 
@@ -31,10 +31,11 @@ public class IAenemy : MonoBehaviour
                 if (Vector3.Distance(initpos, cur.transform.position) < 500)
                 {
                     agent.SetDestination(cur.transform.position);
+                    Debug.Log("moving toward init pos");
                 }
                 else
                 {
-                    Debug.Log("moving toward init pos");
+                    
                     agent.SetDestination((initpos));
                 }
             }
