@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,10 +31,10 @@ public class IAenemy : MonoBehaviour
                 if (Vector3.Distance(initpos, cur.transform.position) < 500)
                 {
                     agent.SetDestination(cur.transform.position);
-                    Debug.Log("moving toward player");
                 }
                 else
                 {
+                    Debug.Log("moving toward init pos");
                     agent.SetDestination((initpos));
                 }
             }
