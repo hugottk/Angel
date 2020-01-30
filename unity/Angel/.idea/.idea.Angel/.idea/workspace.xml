@@ -3,28 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="754952a9-6f7c-4c01-8d2d-b41c038d6413" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Angel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Angel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/GameSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/GameSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/05/055bfe116d1a5addbcd769b9a7204ec3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0a/0a31dd70d0d9b510f82a026049c7dc82" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0d/0df9ee8c10c5b121efd4047efa3b2246" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/11/1148f2475d80b07ce58f3f5749f2cf8c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/23/232627f2990adec62d8b23b8e47093a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/78/78e5699171bd9c555ca4d9734df26579" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8d/8dc28acaafbc4d13d5e6e909f039f0c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9e/9e84a000e1a5b818dbf9842041f6ecfb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b3/b32f20bda3e6a347d6acdbcfe8c07fca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c0/c05776b32c6cf75ce98362386c6bd17b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cc/cc1fcd5d4e0cc45e7bef464ca5ea3591" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d0/d03c61dd7e9cf10ddba50e465bc628a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f0/f0289227e68b1003da8995d076ffd94c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f1/f10a1233bf2765208f6df8ebc51fa57d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6b/6b718db2b2ed3a47e5a40304849e655a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1d6be4-7be16342273b6e943a.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1d6be4-7be16342273b6e943a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1d6be4-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1d6be4-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a50a67-fa0da3de154155e469.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a50a67-fa0da3de154155e469.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a50a67-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a50a67-mainStage.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +25,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://D:/unityhub/projet/first hack n slash/Assets/scripts/IAenemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/.editorconfig" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Photon/GameSetup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,8 +40,8 @@
         <option value="$PROJECT_DIR$/Assets/Scenes/Scripts/Photon/QuickStartRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/Scripts/Photon/GameSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Photon/GameSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/IAenemy.cs" />
       </list>
     </option>
   </component>
@@ -110,6 +97,7 @@
       <workItem from="1580375085121" duration="1924000" />
       <workItem from="1580397054575" duration="122000" />
       <workItem from="1580399265030" duration="202000" />
+      <workItem from="1580399810449" duration="832000" />
     </task>
     <servers />
   </component>

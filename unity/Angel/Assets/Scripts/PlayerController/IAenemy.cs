@@ -26,12 +26,12 @@ public class IAenemy : MonoBehaviour
     {
         if (PV.IsMine)
         {
-            foreach (GameObject cur in GameObject.FindGameObjectsWithTag("Player"))
+            foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
             {
-                if (Vector3.Distance(initpos, cur.transform.position) < 500)
+                if (Vector3.Distance(initpos, player.transform.position) < 20)
                 {
-                    agent.SetDestination(cur.transform.position);
-                    Debug.Log("moving toward init pos");
+                    agent.SetDestination(player.transform.position);
+                    Debug.Log(player.transform.position);
                 }
                 else
                 {
