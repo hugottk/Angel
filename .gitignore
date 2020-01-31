@@ -3,10 +3,11 @@
 /*/
 
 # Inverse ignore some stuff
-!unity/
-!/Assets/
-!/ProjectSettings/
+!unity/Assets/
+!unity/ProjectSettings/
 !.gitignore
+!animation/
+!3D model/
 
 # OS Stuff
 .DS_Store
