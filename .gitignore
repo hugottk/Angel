@@ -3,6 +3,7 @@
 /*/
 
 # Inverse ignore some stuff
+!unity/
 !/Assets/
 !/ProjectSettings/
 !.gitignore
