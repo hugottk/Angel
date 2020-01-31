@@ -8,6 +8,8 @@ ScriptsOnlyBuild:
     - PlayerController
     - QuickStartLobby
     - QuickStartRoom
+    PhotonUnityNetworking.Editor.dll:
+    - ServerSettingsInspector
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -58,37 +60,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 11670}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 12094}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 12398}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12510}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12796}
+      Script: {instanceID: 12566}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 13090}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 15218}
+      Script: {instanceID: 13408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -133,13 +135,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12160}
     - Class: 114
-      Script: {instanceID: 12398}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13336}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -289,6 +291,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 56244a98ab21674942ce135ffb54ea0b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   - hash:
       serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
@@ -829,14 +837,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 56244a98ab21674942ce135ffb54ea0b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraFollow
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/MultiplayerScene.unity
-  playerPath: C:/Users/Mathieu/Angel/unity/Angel/Build/Angel.exe
+  playerPath: C:/Users/hugo2/Desktop/Angel/unity/Angel/Build/Angel.exe

@@ -29,7 +29,15 @@ public class IAenemy : MonoBehaviour
     {    
         if (PV.IsMine)
         {
-            agent.SetDestination(FindClosestEnemy().transform.position);
+            FindClosestEnemy();
+            if (Vector3.Distance(closest.transform.position, transform.position) < 10)
+            {
+                agent.SetDestination(closest.transform.position);
+            }
+            else
+            {
+                agent.SetDestination(initpos);
+            }
         }
     }
     GameObject FindClosestEnemy()
