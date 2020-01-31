@@ -47,7 +47,7 @@ public class IAenemy : MonoBehaviour
      
         foreach (GameObject go in enemyTarget) 
         {
-            Vector3 diff = go.transform.position - initpos;
+            Vector3 diff = go.transform.position - transform.position;
             float curDistance = diff.sqrMagnitude;
          
             if (curDistance < distance) 
