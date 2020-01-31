@@ -5,9 +5,6 @@ unity/*
 # Inverse ignore some stuff
 !unity/Angel/Assets/
 !unity/Angel/ProjectSettings/
-!.gitignore
-!animation/
-!3D model/
 
 # OS Stuff
 .DS_Store
