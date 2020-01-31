@@ -3,8 +3,8 @@
 /*/
 
 # Inverse ignore some stuff
-!unity/Assets/
-!unity/ProjectSettings/
+!unity/Angel/Assets/
+!unity/Angel/ProjectSettings/
 !.gitignore
 !animation/
 !3D model/
