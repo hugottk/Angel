@@ -21,7 +21,6 @@ public class QuickStartRoom : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined room");
-        Debug.Log(PhotonNetwork.CurrentRoom.IsOpen);
         StartGame();
     }
     
