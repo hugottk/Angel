@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameSetup : MonoBehaviour
 {
     public Transform spawnPoint;
+    public Transform enemyspawnPoint;
     // Start is called before the first frame update
     void Start()
     {
