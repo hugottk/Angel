@@ -3,8 +3,8 @@ unity/*/
 unity/*
 
 # Inverse ignore some stuff
-!unity/Angel/Assets/
-!unity/Angel/ProjectSettings/
+!unity/Angel/Assets/*
+!unity/Angel/ProjectSettings/*
 
 # OS Stuff
 .DS_Store
