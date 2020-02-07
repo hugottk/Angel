@@ -4,13 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuickStartLobby : MonoBehaviourPunCallbacks
+public class QuickStartMultiplayer : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject quickStartButton;
 
     [SerializeField] private GameObject quickCancelButton;
-
-    [SerializeField] private int RoomSize;
 
     public override void OnConnectedToMaster()
     {
@@ -36,9 +34,8 @@ public class QuickStartLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("Creating room");
         int randomRoomNumber = Random.Range(0, 10000); //Creating a random number name for the room
-        RoomOptions roomOps = new RoomOptions() {IsVisible =  true, IsOpen = true, MaxPlayers = (byte)RoomSize};
+        RoomOptions roomOps = new RoomOptions() {IsVisible =  true, IsOpen = true, MaxPlayers = 20};
         PhotonNetwork.CreateRoom("Room" + randomRoomNumber, roomOps); //Attempting to create a new room
-        Debug.Log(randomRoomNumber);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
