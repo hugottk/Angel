@@ -18,6 +18,7 @@ public class clicktomove : MonoBehaviour
     private Transform target;
     
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -116,10 +117,5 @@ public class clicktomove : MonoBehaviour
     {
         player.stoppingDistance = 0f;
         target = null;
-    }
-
-    public void MoveToPoint(Vector3 point)
-    {
-        player.SetDestination(point);
     }
 }

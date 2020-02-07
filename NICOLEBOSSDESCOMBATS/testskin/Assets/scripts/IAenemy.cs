@@ -34,7 +34,7 @@ public class IAenemy : MonoBehaviour
         {
             CharacterStats targetStats = target.GetComponent<CharacterStats>();
             if (targetStats != null)
-            {
+            {	
                 combat.Attack(targetStats);
             }
         }

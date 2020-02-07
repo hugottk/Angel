@@ -19,7 +19,7 @@ public class CharacterCombat : MonoBehaviour
     {
         myStats = GetComponent<CharacterStats>();
     }
-    
+
     public void Attack(CharacterStats targetStats)
     {
         if (attackCooldown <= 0f)
@@ -27,6 +27,5 @@ public class CharacterCombat : MonoBehaviour
             targetStats.TakeDamage(myStats.damage.GetValue());
             attackCooldown = 1f / attackSpeed;
         }
-        
     }
 }
