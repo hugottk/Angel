@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     public NavMeshAgent player;
 
     public GameObject camera;
-    
+
+    public Interactable focus;
+
+    private Transform target;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +34,54 @@ public class PlayerController : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    RemoveFocus();
+
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        SetFocus(interactable);
+                    }
                     player.SetDestination(hit.point);
+                }
             }
             
         }
+    }
+    
+    void SetFocus(Interactable newFocus)
+    {
+        if (newFocus != focus)
+        {
+            if (focus != null)
+                focus.OnDeFocused();
+            
+            focus = newFocus;
+            FollowTarget(newFocus);
+        }
+        
+        newFocus.OnFocused(transform);
+        
+    }
+    void RemoveFocus()
+    {
+        if (focus != null)
+            focus.OnDeFocused();
+        
+        focus = null;
+        StopFollowingTarget();
+    }
+    
+    public void FollowTarget(Interactable newTarget)
+    {
+        player.stoppingDistance = newTarget.radius * .8f;
+        target = newTarget.transform;
+        
+    }
+
+    public void StopFollowingTarget()
+    {
+        player.stoppingDistance = 0f;
+        target = null;
     }
 }
