@@ -71,6 +71,8 @@ GameObject:
   - component: {fileID: 2730220572396671764}
   - component: {fileID: 5689697287128453691}
   - component: {fileID: 1055800446978438089}
+  - component: {fileID: 2141925934233015154}
+  - component: {fileID: 687736178720795616}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Player
@@ -225,6 +227,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   camera: {fileID: 7597249388075115656}
+  focus: {fileID: 0}
+--- !u!114 &2141925934233015154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398504260088803699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: facba327bab73ce4d859c3ea98fd1361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage:
+    baseValue: 5
+  armor:
+    baseValue: 0
+--- !u!114 &687736178720795616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398504260088803699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3140b21ad9ae0a54b93a7f222878a063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
 --- !u!1 &7597249388075115656
 GameObject:
   m_ObjectHideFlags: 0
