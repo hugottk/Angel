@@ -1,6 +1,6 @@
 # Ignore everything
-unity/*/
-unity/*
+unity/Angel/*/
+unity/Angel/*
 
 # Inverse ignore some stuff
 !unity/Angel/Assets/*
