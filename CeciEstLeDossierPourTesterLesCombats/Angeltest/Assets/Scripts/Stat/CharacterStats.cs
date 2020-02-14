@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -23,8 +25,15 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+    
+   public void RPCdamage(int damage)
+    {
+        transform.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, damage);
+    } 
+    [PunRPC]
     public void TakeDamage(int damage)
     {
+        
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         
@@ -44,5 +53,8 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         Debug.Log(transform.name + "died");
+        foreach (Transform child in transform) {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 }

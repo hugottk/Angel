@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterStats))]
 public class CharacterCombat : MonoBehaviour
 {
     CharacterStats myStats;
-
+    public PhotonView PV;
     public float attackSpeed = 1f;
     private float attackCooldown = 0f;
 
@@ -24,7 +25,8 @@ public class CharacterCombat : MonoBehaviour
     {
         if (attackCooldown <= 0f)
         {
-            targetStats.TakeDamage(myStats.damage.GetValue());
+            
+            targetStats.RPCdamage(myStats.damage.GetValue());
             attackCooldown = 1f / attackSpeed;
         }
     }
