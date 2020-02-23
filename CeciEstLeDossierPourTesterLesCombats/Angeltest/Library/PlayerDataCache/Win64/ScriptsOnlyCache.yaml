@@ -2,15 +2,22 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraFollow
+    - CharacterCombat
+    - Enemy
+    - EnemyStats
     - GameSetup
+    - HealthUI
     - IAenemy
     - MenuButtons
     - NetworkController
     - PlayerController
+    - PlayerStats
     - QuickStartMultiplayer
     - QuickStartRoom
     - QuickStartSolo
     - RoomController
+    PhotonUnityNetworking.Utilities.dll:
+    - Photon.Pun.UtilityScripts.PhotonStatsGui
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -55,29 +62,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 12048}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 12218}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 13152}
+      Script: {instanceID: 12466}
+    - Class: 114
+      Script: {instanceID: 12562}
+    - Class: 114
+      Script: {instanceID: 12772}
+    - Class: 114
+      Script: {instanceID: 13078}
+    - Class: 114
+      Script: {instanceID: 13386}
+    - Class: 114
+      Script: {instanceID: 13458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -126,41 +143,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11216}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11270}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 11420}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12164}
+      Script: {instanceID: 12218}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12542}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 13012}
+      Script: {instanceID: 12470}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12562}
     - Class: 114
-      Script: {instanceID: 13152}
+      Script: {instanceID: 12614}
+    - Class: 114
+      Script: {instanceID: 12772}
+    - Class: 114
+      Script: {instanceID: 12852}
+    - Class: 114
+      Script: {instanceID: 13078}
+    - Class: 114
+      Script: {instanceID: 13318}
+    - Class: 114
+      Script: {instanceID: 13386}
+    - Class: 114
+      Script: {instanceID: 13458}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -328,7 +357,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 56244a98ab21674942ce135ffb54ea0b
+      Hash: 372af20b101337cf24fc8740439ada99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow
@@ -466,6 +495,12 @@ ScriptsOnlyBuild:
     className: ConnectAndJoinRandom
   - hash:
       serializedVersion: 2
+      Hash: bf4698a3b70ae92d7166ab31c3de7991
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -502,6 +537,12 @@ ScriptsOnlyBuild:
     className: GameSetup
   - hash:
       serializedVersion: 2
+      Hash: 159814baec7f12a89949cd2c17a69e50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyStats
+  - hash:
+      serializedVersion: 2
       Hash: ed8f855e5591297267b390787dee0917
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -526,10 +567,22 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 159814baec7f12a89949cd2c17a69e50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterStats
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 159814baec7f12a89949cd2c17a69e50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerStats
   - hash:
       serializedVersion: 2
       Hash: 14f6e7d5314d3aff9265172f9d1e95a9
@@ -560,6 +613,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonTransformView
+  - hash:
+      serializedVersion: 2
+      Hash: 4e50e8852284484d3cf200730046ac14
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthUI
   - hash:
       serializedVersion: 2
       Hash: ed8f855e5591297267b390787dee0917
@@ -628,6 +687,12 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
+      Hash: bca2fbec75bfee62f9f7710f8f888b07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterCombat
+  - hash:
+      serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -664,7 +729,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 8225e8de64420b81fa4bd3154cfb7d57
+      Hash: 8e04d3b8fcb028ae529fc4f50fc917ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -868,6 +933,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: bf4698a3b70ae92d7166ab31c3de7991
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Interactable
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -888,4 +959,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/nicol/Angel/unity/Angel/Angel.exe
+  playerPath: C:/Users/Mathieu/Angel/CeciEstLeDossierPourTesterLesCombats/Angeltest/Build/Angel.exe
