@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="857c9062-3a37-468b-91d7-b3f714c37548" name="Default Changelist" comment="" />
@@ -71,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582410008313</updated>
       <workItem from="1582410011272" duration="2421000" />
+      <workItem from="1582463492839" duration="252000" />
     </task>
     <servers />
   </component>
@@ -84,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,13 @@ public class HealthUI : MonoBehaviour
     Transform cam;
 
     Image HealthSLider;
+
+    Quaternion rotation;
+    private void Awake()
+    {
+        rotation = transform.rotation; //Disable the fact that the healthui rotate with the hero
+    }
+
     void Start()
     {
         //cam = Camera.main.transform;
@@ -59,11 +67,12 @@ public class HealthUI : MonoBehaviour
         if (ui != null)
         {
             ui.position = target.position;
+            ui.rotation = rotation; //Disable the fact that the healthui rotate with the hero
             //ui.forward = -cam.forward;
 
             //if (Time.time - lastMadeVisibleTime > visibleTime)
             //{
-                //ui.gameObject.SetActive(false);
+            //ui.gameObject.SetActive(false);
             //}
         }
     }
