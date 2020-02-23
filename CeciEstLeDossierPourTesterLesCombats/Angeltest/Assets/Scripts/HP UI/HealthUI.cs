@@ -24,16 +24,16 @@ public class HealthUI : MonoBehaviour
     void Start()
     {
         //cam = Camera.main.transform;
-        //foreach (Canvas c in FindObjectsOfType<Canvas>())
-        //{
-            //if (c.renderMode == RenderMode.WorldSpace)
-            //{
+        foreach (Canvas c in FindObjectsOfType<Canvas>())
+        {
+            if (c.renderMode == RenderMode.WorldSpace)
+            {
                 ui = Instantiate(uiPrefab, playerCanvas.transform).transform;
                 HealthSLider = ui.GetChild(0).GetComponent<Image>();
                 //ui.gameObject.SetActive(false);
-                //break;
-            //}
-        //}
+                break;
+            }
+        }
 
         GetComponent<CharacterStats>().OnHealthChanged += OnHealthChanged;
     }
