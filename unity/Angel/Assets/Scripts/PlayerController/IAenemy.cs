@@ -34,7 +34,7 @@ public class IAenemy : MonoBehaviour
             GameObject target = FindClosestEnemy();
             float playerDistance = Vector3.Distance(target.transform.position, transform.position);
 
-            if (playerDistance <= agent.stoppingDistance)
+            if (playerDistance <= agent.stoppingDistance + agent.radius)
             {
                 CharacterStats targetStats = target.GetComponent<CharacterStats>();
                 if (targetStats != null)
