@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PV.IsMine)
         {
+            Strike = false;
             if (Input.GetMouseButton(1))
             {
                 RaycastHit hit;
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
                 {
                     RemoveFocus();
                     running = true;
-
+                    
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
                     if (interactable != null)
                     {
@@ -65,9 +66,7 @@ public class PlayerController : MonoBehaviour
                         Strike = false;
                     }
                     player.SetDestination(hit.point);
-                }
-
-                
+                } 
             }
 
             if (AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName("combat"))
@@ -79,6 +78,10 @@ public class PlayerController : MonoBehaviour
             else
             {
                 player.isStopped = false;
+            }
+            if (player.remainingDistance <= player.stoppingDistance)
+            {
+                running = false;
             }
             anim.SetBool("running",running);
             anim.SetBool("flying", flying);

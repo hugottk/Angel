@@ -18,6 +18,7 @@ public class HealthUI : MonoBehaviour
    private Transform ui;
 
     Transform cam;
+    private Quaternion rotation;
 
     Image HealthSLider;
     void Start()
@@ -33,6 +34,8 @@ public class HealthUI : MonoBehaviour
                 break;
             }
         }
+
+        rotation = ui.rotation;
 
         GetComponent<CharacterStats>().OnHealthChanged += OnHealthChanged;
     }
@@ -55,6 +58,7 @@ public class HealthUI : MonoBehaviour
     
     void LateUpdate()
     {
+        ui.rotation = rotation;
         if (ui != null)
         {
             ui.position = target.position;
