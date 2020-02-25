@@ -15,12 +15,19 @@ public class PlayerController : MonoBehaviour
     public Interactable focus;
 
     private Transform target;
+    
+    private Animator anim;
+    private bool running;
+    private bool flying;
+    private int attackrange = 20;
+    private bool Strike = false;
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
         player = GetComponent<NavMeshAgent>();
         camera.SetActive(PV.IsMine);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PV.IsMine)
         {
+            Strike = false;
             if (Input.GetMouseButton(1))
             {
                 RaycastHit hit;
@@ -36,15 +44,42 @@ public class PlayerController : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
                     RemoveFocus();
-
+                    running = true;
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
                     if (interactable != null)
                     {
                         SetFocus(interactable);
+                        if (player.remainingDistance < attackrange)
+                        {
+                            Strike = true;
+                            running = false;
+                            flying = false;
+                        }
+                    }
+                    else
+                    {
+                        Strike = false;
                     }
                     player.SetDestination(hit.point);
                 }
             }
+            if (AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName("combat"))
+            {
+                player.isStopped = true;
+                running = false;
+                flying = false;
+            }
+            else
+            {
+                player.isStopped = false;
+            }
+            if (player.remainingDistance <= player.stoppingDistance)
+            {
+                running = false;
+            }
+            anim.SetBool("running",running);
+            anim.SetBool("flying", flying);
+            anim.SetBool("strike",Strike);
             
         }
     }
@@ -83,5 +118,10 @@ public class PlayerController : MonoBehaviour
     {
         player.stoppingDistance = 0f;
         target = null;
+    }
+    
+    bool AnimatorIsPlaying(){
+        return anim.GetCurrentAnimatorStateInfo(0).length >
+               anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
     }
 }
