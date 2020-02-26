@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - GameSetup
     - HealthUI
     - IAenemy
+    - ManaUI
     - MenuButtons
     - NetworkController
     - PlayerController
@@ -16,10 +17,6 @@ ScriptsOnlyBuild:
     - QuickStartRoom
     - QuickStartSolo
     - RoomController
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonAnimatorViewEditor
-    - Photon.Pun.PhotonTransformViewEditor
-    - Photon.Pun.PhotonViewInspector
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.PhotonStatsGui
     PhotonUnityNetworking.dll:
@@ -66,49 +63,57 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11736}
-    - Class: 114
-      Script: {instanceID: 11810}
-    - Class: 114
-      Script: {instanceID: 11822}
-    - Class: 114
-      Script: {instanceID: 11884}
-    - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 12060}
     - Class: 114
       Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12154}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 13152}
+      Script: {instanceID: 12574}
+    - Class: 114
+      Script: {instanceID: 12784}
+    - Class: 114
+      Script: {instanceID: 13088}
+    - Class: 114
+      Script: {instanceID: 13396}
+    - Class: 114
+      Script: {instanceID: 13468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -118,6 +123,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
+    - Class: 218
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
@@ -125,6 +132,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 238
+      Script: {instanceID: 0}
+    - Class: 1953259897
       Script: {instanceID: 0}
     Assets/Scenes/Menu.unity:
     - Class: 1
@@ -160,55 +169,57 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 11254}
+      Script: {instanceID: 11578}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11404}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 11810}
-    - Class: 114
-      Script: {instanceID: 11822}
-    - Class: 114
-      Script: {instanceID: 11906}
-    - Class: 114
-      Script: {instanceID: 11970}
-    - Class: 114
-      Script: {instanceID: 12070}
+      Script: {instanceID: 12014}
     - Class: 114
       Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12154}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12542}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 12770}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 13012}
+      Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 13152}
+      Script: {instanceID: 12784}
+    - Class: 114
+      Script: {instanceID: 12864}
+    - Class: 114
+      Script: {instanceID: 13088}
+    - Class: 114
+      Script: {instanceID: 13328}
+    - Class: 114
+      Script: {instanceID: 13396}
+    - Class: 114
+      Script: {instanceID: 13468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -462,6 +473,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 88cc1c934fe3ce7422102089e2d289c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManaUI
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -558,7 +575,7 @@ ScriptsOnlyBuild:
     className: GameSetup
   - hash:
       serializedVersion: 2
-      Hash: 159814baec7f12a89949cd2c17a69e50
+      Hash: cf8c92c91aa9309dc4dcaee56bcf15a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyStats
@@ -588,7 +605,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 159814baec7f12a89949cd2c17a69e50
+      Hash: cf8c92c91aa9309dc4dcaee56bcf15a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterStats
@@ -600,7 +617,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 159814baec7f12a89949cd2c17a69e50
+      Hash: cf8c92c91aa9309dc4dcaee56bcf15a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerStats
@@ -980,4 +997,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/hugo2/Desktop/Angel/CeciEstLeDossierPourTesterLesCombats/Angeltest/Build/Angel.exe
+  playerPath: C:/Users/Mathieu/Angel/CeciEstLeDossierPourTesterLesCombats/Angeltest/Build/Angel.exe
