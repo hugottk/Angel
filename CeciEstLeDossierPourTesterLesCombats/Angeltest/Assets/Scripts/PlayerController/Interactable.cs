@@ -27,11 +27,14 @@ public class Interactable : MonoBehaviour
     {
         //Tue tous les ennemis si on appuie sur D
         OneShot();
+        if (isFocus)
+        {
+            //inflige des dégâts à distance sur le focus
+            Spell();
+        }
         
         if (!hasInteracted && isFocus)
         {
-            //    Spell();
-            
             float distance = Vector3.Distance(player.position, transform.position);
             float spellDistance = Vector3.Distance(player.position, transform.position);
             if (distance <= radius)
@@ -41,8 +44,6 @@ public class Interactable : MonoBehaviour
             }
             else if (spellDistance <= radius * 10)
             {
-                //inflige des dégâts à distance sur le focus
-                Spell();
                 hasInteracted = true;
             }
         }

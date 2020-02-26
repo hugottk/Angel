@@ -38,7 +38,7 @@ public class Enemy : Interactable
         base.OneShot();
         if (Input.GetKeyDown(KeyCode.D))
         {
-            myStats.TakeDamage(myStats.maxHealth + myStats.armor.GetValue());
+            myStats.RPCdamage(myStats.maxHealth + myStats.armor.GetValue());
         }
     }
 
@@ -48,7 +48,18 @@ public class Enemy : Interactable
         base.Spell();
         if (Input.GetKeyDown(KeyCode.R))
         {
-            myStats.TakeDamage((myStats.currentHealth + myStats.armor.GetValue()) / 2);
+            enemyTarget = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (GameObject go in enemyTarget)
+            {
+                CharacterStats playerMana = go.GetComponent<CharacterStats>();
+                if (playerMana.currentMana >= 10)
+                {
+                    playerMana.currentMana -= 10;
+                    myStats.RPCdamage(10);
+                }
+            }
+            
         }
     }
 }

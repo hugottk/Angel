@@ -6,22 +6,31 @@ using System.Collections;
 public class CharacterStats : MonoBehaviour
 {
     public int maxHealth = 100;
+    public int maxMana = 50;
     public int currentHealth { get; private set; }
+    public int currentMana { get; set; }
     
     public Stat damage;
     public Stat armor;
-    public event System.Action<int, int> OnHealthChanged;     
+    public event System.Action<int, int> OnHealthChanged;
+    public event System.Action<int, int> OnManaChanged;
+
+    private float t = 0.0f;
+    private float Second = 1.0f;
 
     void Awake()
     {
         currentHealth = maxHealth;
+        currentMana = maxMana;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        t += Time.deltaTime;
+        if (t >= Second && currentMana <= maxMana)
         {
-            TakeDamage(10);
+            t = 0.0f;
+            currentMana += 1;
         }
     }
 
@@ -44,6 +53,12 @@ public class CharacterStats : MonoBehaviour
         {
             OnHealthChanged(maxHealth, currentHealth);
         }
+
+        if (OnManaChanged != null)
+        {
+            OnManaChanged(maxMana, currentMana);
+        }
+        
         if (currentHealth <= 0)
         {
             Die();

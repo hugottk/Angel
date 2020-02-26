@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6accadf309ca4e049b27a906be922451
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerCanvas: {instanceID: 0}
+  - uiManaPrefab: {fileID: 5083354894717153857, guid: 0819b8b727f52d4469303413f89fa359,
+      type: 3}
+  - target: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
