@@ -14,8 +14,7 @@ public class ManaUI : MonoBehaviour
 
     Transform uiMana;
 
-    Transform cam;
-
+                                                                         
     Image ManaSlider;
 
     Quaternion rotation;
@@ -30,26 +29,25 @@ public class ManaUI : MonoBehaviour
         {
             if (c.renderMode == RenderMode.WorldSpace)
             {
-                
                 uiMana = Instantiate(uiManaPrefab, playerCanvas.transform).transform;
                 ManaSlider = uiMana.GetChild(0).GetComponent<Image>();
                 break;
             }
         }
 
-        GetComponent<CharacterStats>().OnManaChanged += OnManaChange;
+        GetComponent<CharacterStats>().OnManaChanged += OnManaChanged;
+        GetComponent<PlayerStats>().OnManaChanged += OnManaChanged;
     }
 
-    void OnManaChange(int maxMana, int currentMana)
+    void OnManaChanged(int maxMana, int currentMana)
     {
         if (uiMana != null)
         {
             uiMana.gameObject.SetActive(true);
             float manaPercent = currentMana / (float) maxMana;
             ManaSlider.fillAmount = manaPercent;
-
         }
-    }
+    }    
     
     
     void LateUpdate()
@@ -59,6 +57,5 @@ public class ManaUI : MonoBehaviour
             uiMana.position = target.position;
             uiMana.rotation = rotation;    
         }
-        GetComponent<CharacterStats>().OnManaChanged += OnManaChange;
     }
 }

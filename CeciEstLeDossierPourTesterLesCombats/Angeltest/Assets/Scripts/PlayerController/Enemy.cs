@@ -44,7 +44,7 @@ public class Enemy : Interactable
 
     //Inflige la moitié des points de vie d'une unité en dégâts.
     public override void Spell()
-    {
+    {    
         base.Spell();
         if (Input.GetKeyDown(KeyCode.R))
         {

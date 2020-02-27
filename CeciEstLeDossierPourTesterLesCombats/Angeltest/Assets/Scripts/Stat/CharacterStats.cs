@@ -15,9 +15,6 @@ public class CharacterStats : MonoBehaviour
     public event System.Action<int, int> OnHealthChanged;
     public event System.Action<int, int> OnManaChanged;
 
-    private float t = 0.0f;
-    private float Second = 1.0f;
-
     void Awake()
     {
         currentHealth = maxHealth;
@@ -26,12 +23,6 @@ public class CharacterStats : MonoBehaviour
 
     void Update()
     {
-        t += Time.deltaTime;
-        if (t >= Second && currentMana <= maxMana)
-        {
-            t = 0.0f;
-            currentMana += 1;
-        }
     }
 
     

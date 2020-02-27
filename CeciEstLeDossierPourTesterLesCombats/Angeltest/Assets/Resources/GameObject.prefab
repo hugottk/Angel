@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  maxMana: 50
   damage:
     baseValue: 5
   armor:
