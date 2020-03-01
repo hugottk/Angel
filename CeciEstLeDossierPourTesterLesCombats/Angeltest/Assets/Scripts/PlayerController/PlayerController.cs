@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool flying;
     private int attackrange = 20;
     private bool Strike = false;
+    public GameObject myPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<NavMeshAgent>();
         camera.SetActive(PV.IsMine);
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -35,7 +37,31 @@ public class PlayerController : MonoBehaviour
     {
         if (PV.IsMine)
         {
+            //nouvel gameobject : player qui a appuyé sur R (currPlayer)
             Strike = false;
+            //if (Input.GetKeyDown(KeyCode.R))
+            // currPlayer.GetComponent<PlayerStats>(); (pour avoir les stats du player et surtout le mana
+            // currPlayer.GetComponent<Interactable>(); ... (pour savoir si il a un focus ou non (et donc si il peut lancer un sort ou non))
+            // faire la diminution du mana si possible comme avant.
+            foreach (GameObject attackPlayer in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                if (player.GetComponent<PhotonView>().IsMine)
+                {
+                    myPlayer = attackPlayer;
+                }
+            }
+
+            PlayerStats myPlayerStats = myPlayer.GetComponent<PlayerStats>();
+            Interactable InteractMyPlayer = myPlayer.GetComponent<Interactable>();
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (myPlayerStats.currentMana >= 10 && focus != null)
+                {
+                    myPlayerStats.currentMana -= 10;
+                }
+            }
+            
             if (Input.GetMouseButton(1))
             {
                 RaycastHit hit;

@@ -4,7 +4,7 @@ public class Interactable : MonoBehaviour
 {
     public float radius = 4f;
 
-    bool isFocus = false;
+    public bool isFocus = false;
     Transform player;
     bool hasInteracted = false;
 

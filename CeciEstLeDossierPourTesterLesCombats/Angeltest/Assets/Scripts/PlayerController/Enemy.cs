@@ -55,7 +55,6 @@ public class Enemy : Interactable
                 CharacterStats playerMana = go.GetComponent<CharacterStats>();
                 if (playerMana.currentMana >= 10)
                 {
-                    playerMana.currentMana -= 10;
                     myStats.RPCdamage(10);
                 }
             }

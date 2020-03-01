@@ -164,6 +164,7 @@ MonoBehaviour:
     baseValue: 5
   armor:
     baseValue: 0
+  player: {fileID: 0}
 --- !u!114 &4175070350429239235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +207,7 @@ MonoBehaviour:
   player: {fileID: 1438571148867770379}
   camera: {fileID: 7597249388075115656}
   focus: {fileID: 0}
+  myPlayer: {fileID: 0}
 --- !u!114 &7065855044892843821
 MonoBehaviour:
   m_ObjectHideFlags: 0
