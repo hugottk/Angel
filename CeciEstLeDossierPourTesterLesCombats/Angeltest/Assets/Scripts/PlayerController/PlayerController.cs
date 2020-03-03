@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             // faire la diminution du mana si possible comme avant.
             foreach (GameObject attackPlayer in GameObject.FindGameObjectsWithTag("Player"))
             {
-                if (player.GetComponent<PhotonView>().IsMine)
+                if (attackPlayer.GetComponent<PhotonView>().IsMine)
                 {
                     myPlayer = attackPlayer;
                 }

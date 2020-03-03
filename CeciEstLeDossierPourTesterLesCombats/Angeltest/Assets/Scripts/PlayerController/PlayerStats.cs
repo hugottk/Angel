@@ -30,6 +30,20 @@ public class PlayerStats : CharacterStats
         base.Die();
     }
 
+    public void RPCmana(int maxMana, int currentMana)
+    {
+        transform.GetComponent<PhotonView>().RPC("UpdateMana", RpcTarget.AllBuffered, maxMana, currentMana);
+    }
+
+    [PunRPC]
+    public void UpdateMana(int maxMana, int currentMana)
+    {
+        if (OnManaChanged != null)
+        {
+            OnManaChanged(maxMana, currentMana);
+        }
+    }
+
     void Update()
     {
         if (PV.IsMine)
@@ -42,10 +56,7 @@ public class PlayerStats : CharacterStats
             }
 
             Debug.Log(currentMana + " Current Mana");
-            if (OnManaChanged != null)
-            {
-                OnManaChanged(maxMana, currentMana);
-            }
+            RPCmana(maxMana, currentMana);
         }
     }
 }
