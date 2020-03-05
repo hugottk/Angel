@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 
 [RequireComponent(typeof(CharacterStats))]
@@ -9,6 +10,7 @@ public class Enemy : Interactable
     CharacterStats myStats;
     
     GameObject[] enemyTarget;
+    GameObject player;
 
     void Start()
     {
@@ -52,7 +54,11 @@ public class Enemy : Interactable
 
             foreach (GameObject go in enemyTarget)
             {
-                CharacterStats playerMana = go.GetComponent<CharacterStats>();
+                if (go.GetComponent<PhotonView>().IsMine)
+                {
+                    player = go;
+                }
+                CharacterStats playerMana = player.GetComponent<CharacterStats>();
                 if (playerMana.currentMana >= 10)
                 {
                     myStats.RPCdamage(10);
