@@ -1,0 +1,109 @@
+/* HEADER */
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #262322;
+}
+
+header {
+    background-color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+header nav {
+    display: flex;
+}
+
+header a {
+    font-size: 17px;
+    color: #262322;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 20px;
+}
+
+header a:hover {
+    color: white;
+    background-color: #33a2ff;
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 20px;
+    padding: 20px;
+    color: #262322;
+}
+
+/* Qu'est-ce que Angel ? */
+
+section {
+    /*background-image: url(images/angel.JPG);
+    background-position: center;
+    background-repeat: no-repeat;*/
+    padding: 25px;
+}
+
+section .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+}
+
+section h1 {
+    width: 400px;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: white;
+    font-weight: 200;
+    width: 40%;
+    line-height: 2;
+    text-align: justify;
+}
+
+section a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px solid #33a2ff;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #33a2ff 50%, #33a2ff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+}
+
+section a:hover {
+    transition: 0.4s;
+    background-position: 0 0;
+}
+
+@media all and (max-width: 1200px) {
+
+    section .container,
+    header .container {
+        width: 95%;
+    }
+}
+
+/* COULEURS 
+bleu:  #33a2ff
+vert:  #28cf46
+jaune: #FFC300
+rouge: #ff3933
