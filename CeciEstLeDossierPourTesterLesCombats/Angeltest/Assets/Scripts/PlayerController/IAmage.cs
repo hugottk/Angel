@@ -6,7 +6,6 @@ using Photon.Pun.UtilityScripts;
 using UnityEngine;
 using UnityEngine.AI;
 
-
 public class IAmage : MonoBehaviour
 {
     public NavMeshAgent agent;
@@ -15,15 +14,6 @@ public class IAmage : MonoBehaviour
     GameObject[] enemyTarget;
     private GameObject closest;
     CharacterCombat combat;
-    
-    void Start()
-    {
-        PV = GetComponent<PhotonView>();
-        agent = GetComponent<NavMeshAgent>();
-        initpos = transform.position;
-        enemyTarget = new GameObject [4];
-        combat = GetComponent<CharacterCombat>();
-    }
     
     void Update()
     {    
@@ -43,7 +33,7 @@ public class IAmage : MonoBehaviour
             
             if (Vector3.Distance(closest.transform.position, transform.position) < 10)
             {
-                agent.SetDestination(closest.transform.position+3*Vector3.back);
+                agent.SetDestination(closest.transform.position);
             }
             else
             {
