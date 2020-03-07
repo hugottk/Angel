@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\hugo2\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\hugo2\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Angeltest.-12907031.00" t="ExcludeRecursive" />
-    <e p="C:\Users\hugo2\Desktop\Angel\CeciEstLeDossierPourTesterLesCombats\Angeltest" t="IncludeRecursive">
+    <e p="C:\Users\damie\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\damie\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Angeltest.649448255.00" t="ExcludeRecursive" />
+    <e p="C:\Users\damie\Documents\Damien\Angel\Angel\CeciEstLeDossierPourTesterLesCombats\Angeltest" t="IncludeRecursive">
       <e p="Angeltest.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Map" t="Include">
+          <e p="A_piece_of_nature" t="Include">
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -161,6 +166,7 @@
         <e p="Scripts" t="Include">
           <e p="HP UI" t="Include">
             <e p="HealthUI.cs" t="Include" />
+            <e p="ManaUI.cs" t="Include" />
           </e>
           <e p="Menu" t="Include">
             <e p="MenuButtons.cs" t="Include" />
@@ -179,6 +185,7 @@
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyStats.cs" t="Include" />
             <e p="IAenemy.cs" t="Include" />
+            <e p="IAmage.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerStats.cs" t="Include" />
