@@ -33,6 +33,5 @@ MonoBehaviour:
   - DestroyRpc
   - Die2
   - TakeDamage
-  - UpdateMana
   DisableAutoOpenWizard: 1
   ShowSettings: 0

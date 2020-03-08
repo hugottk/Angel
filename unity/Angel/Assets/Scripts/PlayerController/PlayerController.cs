@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
@@ -15,13 +16,15 @@ public class PlayerController : MonoBehaviour
     public Interactable focus;
 
     private Transform target;
-    
+
     private Animator anim;
     private bool running;
     private bool flying;
     private int attackrange = 20;
     private bool Strike = false;
-    public GameObject myPlayer;
+
+    private Quaternion _lookRotation;
+    private Vector3 _direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +32,6 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<NavMeshAgent>();
         camera.SetActive(PV.IsMine);
         anim = GetComponent<Animator>();
-        
     }
 
     // Update is called once per frame
@@ -37,30 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PV.IsMine)
         {
-            //nouvel gameobject : player qui a appuyé sur R (currPlayer)
             Strike = false;
-            //if (Input.GetKeyDown(KeyCode.R))
-            // currPlayer.GetComponent<PlayerStats>(); (pour avoir les stats du player et surtout le mana
-            // currPlayer.GetComponent<Interactable>(); ... (pour savoir si il a un focus ou non (et donc si il peut lancer un sort ou non))
-            // faire la diminution du mana si possible comme avant.
-            foreach (GameObject testPlayer in GameObject.FindGameObjectsWithTag("Player"))
-            {
-                if (testPlayer.GetComponent<PhotonView>().IsMine)
-                {
-                    myPlayer = testPlayer;
-                }
-            }
-
-            PlayerStats myPlayerStats = myPlayer.GetComponent<PlayerStats>();
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                if (myPlayerStats.currentMana >= 10 && focus != null)
-                {
-                    myPlayerStats.currentMana -= 10;
-                }
-            }
-            
             if (Input.GetMouseButton(1))
             {
                 RaycastHit hit;
@@ -70,6 +49,7 @@ public class PlayerController : MonoBehaviour
                 {
                     RemoveFocus();
                     running = true;
+                    
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
                     if (interactable != null)
                     {
@@ -86,8 +66,9 @@ public class PlayerController : MonoBehaviour
                         Strike = false;
                     }
                     player.SetDestination(hit.point);
-                }
+                } 
             }
+
             if (AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName("combat"))
             {
                 player.isStopped = true;
@@ -105,9 +86,10 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("running",running);
             anim.SetBool("flying", flying);
             anim.SetBool("strike",Strike);
-            
         }
     }
+    
+    
     
     void SetFocus(Interactable newFocus)
     {
