@@ -25,11 +25,15 @@ public class Enemy : Interactable
 
         foreach (GameObject go in enemyTarget)
         {
-            CharacterCombat playerCombat = go.GetComponent<CharacterCombat>();
-            if (playerCombat != null)
+            if (go.GetComponent<PhotonView>().IsMine)
             {
-                playerCombat.Attack(myStats);
+                CharacterCombat playerCombat = go.GetComponent<CharacterCombat>();
+                if (playerCombat != null)
+                {
+                    playerCombat.Attack(myStats);
+                }
             }
+            
         }
         
     }
@@ -57,12 +61,13 @@ public class Enemy : Interactable
                 if (go.GetComponent<PhotonView>().IsMine)
                 {
                     player = go;
+                    CharacterStats playerMana = player.GetComponent<CharacterStats>();
+                    if (playerMana.currentMana >= 10)
+                    {
+                        myStats.RPCdamage(10);
+                    }
                 }
-                CharacterStats playerMana = player.GetComponent<CharacterStats>();
-                if (playerMana.currentMana >= 10)
-                {
-                    myStats.RPCdamage(10);
-                }
+                
             }
             
         }
