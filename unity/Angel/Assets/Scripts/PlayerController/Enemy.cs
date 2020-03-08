@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 
 [RequireComponent(typeof(CharacterStats))]
@@ -9,6 +10,7 @@ public class Enemy : Interactable
     CharacterStats myStats;
     
     GameObject[] enemyTarget;
+    GameObject player;
 
     void Start()
     {
@@ -38,17 +40,32 @@ public class Enemy : Interactable
         base.OneShot();
         if (Input.GetKeyDown(KeyCode.D))
         {
-            myStats.TakeDamage(myStats.maxHealth + myStats.armor.GetValue());
+            myStats.RPCdamage(myStats.maxHealth + myStats.armor.GetValue());
         }
     }
 
     //Inflige la moitié des points de vie d'une unité en dégâts.
     public override void Spell()
-    {
+    {    
         base.Spell();
         if (Input.GetKeyDown(KeyCode.R))
         {
-            myStats.TakeDamage((myStats.currentHealth + myStats.armor.GetValue()) / 2);
+            enemyTarget = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (GameObject go in enemyTarget)
+            {
+                if (go.GetComponent<PhotonView>().IsMine)
+                {
+                    player = go;
+                }
+                CharacterStats playerStats = player.GetComponent<CharacterStats>();
+                
+                if (playerStats.currentMana >= 10)
+                {
+                    myStats.RPCdamage(10);
+                }
+            }
+            
         }
     }
 }
